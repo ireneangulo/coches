@@ -14,7 +14,7 @@ class Coche(Vehiculo):
     def __str__(self):
         return Vehiculo.__str__(self) + ", {} km/h, {} cc".format(self.velocidad, self.cilindrada)
 
-coche = Coche("azul", 150, 4, 1200)
+coche = Coche("azul", 4, 150, 1200)
 print(coche)
 
 class Camioneta(Coche):
