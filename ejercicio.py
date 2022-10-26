@@ -38,3 +38,26 @@ class Motocicleta(Coche):
         self.cilindrada= cilindrada
     def __str__(self):
         return super().__str__() + ", {} km/h, {} cc".format(self.velocidad, self.cilindrada)
+
+def catalogar(vehiculos):
+    for vehiculo in vehiculos:
+        print(type(vehiculo).__name__, vehiculo)
+def catalogar(vehiculos, ruedas=None):
+    if ruedas !=None:
+        contador= 0
+        for vehiculo in vehiculos: 
+            if vehiculo.ruedas == ruedas:
+                contador += 1
+        print("\ Se han encontrado {} vehículos con {} ruedas: ".format(contador,ruedas))
+    
+    for vehiculo in vehiculos: 
+        if ruedas == None:
+            print(type(vehiculo).__name__, vehiculo)
+        else: 
+            if vehiculo.ruedas == ruedas:
+                print(type(vehiculo).__name__, vehiculo) 
+
+
+
+
+
