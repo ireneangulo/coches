@@ -57,7 +57,7 @@ def catalogar(vehiculos, ruedas=None):
             if vehiculo.ruedas == ruedas:
                 print(type(vehiculo).__name__, vehiculo) 
 lista =[
-    Coche("azul", 150, 4, 1200),
+    Coche("azul", 4, 150, 1200),
     Camioneta("roja", 4, 240, 1300, 2000),
     Bicicleta("rosa", 2, "montaña"),
     Motocicleta("negra", 2, "ciudad", 120, 800)
