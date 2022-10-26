@@ -24,14 +24,14 @@ class Camioneta(Coche):
     def __str__(self):
         return super().__str__() + ", {} kg de carga".format(self.carga)
 
-class Bicicleta(Coche):
+class Bicicleta(Vehiculo):
     def __init__(self, color, ruedas, tipo):
         super().__init__(color, ruedas)
         self.tipo= tipo
     def __str__(self):
         return super().__str__() + ", {}".format(self.tipo)
 
-class Motocicleta(Coche):
+class Motocicleta(Bicicleta):
     def __init__(self, color, ruedas, tipo, velocidad, cilindrada):
         super().__init__(color, ruedas, tipo)
         self.velocidad = velocidad
@@ -56,6 +56,17 @@ def catalogar(vehiculos, ruedas=None):
         else: 
             if vehiculo.ruedas == ruedas:
                 print(type(vehiculo).__name__, vehiculo) 
+lista =[
+    Coche("azul", 150, 4, 1200),
+    Camioneta("roja", 4, 240, 1300, 2000),
+    Bicicleta("rosa", 2, "montaña"),
+    Motocicleta("negra", 2, "ciudad", 120, 800)
+]
+
+catalogar(lista)
+catalogar(lista, 0)
+catalogar(lista, 2)
+catalogar(lista, 4)
 
 
 
